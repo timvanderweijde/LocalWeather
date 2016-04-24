@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "Local weather webapp",
   "main": "index.html",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.12.3",
-    "del": "^2.2.0",
-    "gulp": "^3.9.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css-loader": "^0.23.1",
+    "npm-install-webpack-plugin": "^3.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.12.0"
   },
   "repository": {
     "type": "git",
