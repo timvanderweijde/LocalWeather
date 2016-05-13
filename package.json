@@ -1,0 +1,24 @@
+{
+  "name": "localweather",
+  "version": "1.0.0",
+  "description": "Local weather webapp",
+  "main": "index.html",
+  "scripts": {
+    "start": "browser-sync start --server --files \"css/*.css\" \"*.html\" \"js/*.js\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "browser-sync": "^2.12.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timvanderweijde/LocalWeather.git"
+  },
+  "author": "Tim van der Weijde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timvanderweijde/LocalWeather/issues"
+  },
+  "homepage": "https://github.com/timvanderweijde/LocalWeather#readme"
+}
