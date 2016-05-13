@@ -1,0 +1,126 @@
+body {
+    font-size: 12px; 
+}
+
+.container {
+    background-color: yellowgreen;
+}
+
+/*
+  Docs at http://http://simpleweatherjs.com
+
+  Look inspired by http://www.degreees.com/
+  Used for demo purposes.
+
+  Weather icon font from http://fonts.artill.de/collection/artill-weather-icons
+
+  DO NOT hotlink the assets/font included in this demo. If you wish to use the same font icon then download it to your local assets at the link above. If you use the links below odds are at some point they will be removed and your version will break.
+*/
+
+body {
+  padding: 45px 25px;
+  font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background: #1192d3;
+}
+
+#weather {
+  width: 500px;
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+i {
+  color: #fff;
+  font-family: weather;
+  font-size: 150px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.0;
+}
+
+.icon-0:before { }
+.icon-1:before { }
+.icon-2:before { }
+.icon-3:before { }
+.icon-4:before { }
+.icon-5:before { }
+.icon-6:before { }
+.icon-7:before { }
+.icon-8:before { }
+.icon-9:before { }
+.icon-10:before {  }
+.icon-11:before {  }
+.icon-12:before {  }
+.icon-13:before {  }
+.icon-14:before {  }
+.icon-15:before {  }
+.icon-16:before {  }
+.icon-17:before {  }
+.icon-18:before {  }
+.icon-19:before {  }
+.icon-20:before {  }
+.icon-21:before {  }
+.icon-22:before {  }
+.icon-23:before {  }
+.icon-24:before {  }
+.icon-25:before {  }
+.icon-26:before {  }
+.icon-27:before {  }
+.icon-28:before {  }
+.icon-29:before {  }
+.icon-30:before {  }
+.icon-31:before {  }
+.icon-32:before {  }
+.icon-33:before {  }
+.icon-34:before {  }
+.icon-35:before {  }
+.icon-36:before {  }
+.icon-37:before {  }
+.icon-38:before {  }
+.icon-39:before {  }
+.icon-40:before {  }
+.icon-41:before {  }
+.icon-42:before {  }
+.icon-43:before {  }
+.icon-44:before {  }
+.icon-45:before {  }
+.icon-46:before {  }
+.icon-47:before {  }
+
+#weather h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 100px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+#weather li {
+  background: #fff;
+  background: rgba(255,255,255,0.90);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+#weather .currently {
+  margin: 0 20px;
+}
+
+button {
+  display: block;
+  margin: 15px auto;
+  width: 140px;
+  padding: 5px;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  border-radius: 5px;
+}
