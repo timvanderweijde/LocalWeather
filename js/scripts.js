@@ -1,12 +1,3 @@
-/* Does your browser support geolocation? */
-if ("geolocation" in navigator) {
-  $('.js-geolocation').show(); 
-} else {
-  $('.js-geolocation').hide();
-}
-
-/* Where in the world are you? */
-
 var mapping = {};
 mapping[0] = "wi wi-tornado";
 mapping[1] = "wi wi-storm-showers";
@@ -60,25 +51,30 @@ mapping[3200] = "wi wi-alien";
    
 $(document).ready(function() {
   
-$('.js-geolocation').on('click', function() {
-  navigator.geolocation.getCurrentPosition(function(position) {
+  /* Does your browser support geolocation? */
+if ("geolocation" in navigator) {
+  $('.not-supported').hide(); 
+   navigator.geolocation.getCurrentPosition(function(position) {
     loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
   });
-});
+} else {
+  $('.not-supported').show();
+}
+ 
 });
 
 function loadWeather(location, woeid) {
   $.simpleWeather({
     location: location,
     woeid: woeid,
-    unit: 'f',
+    unit: 'c',
     success: function(weather) {
-      html = '<h2><i class="'+ mapping[weather.code]+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';  
+      // html = '<h2><i class="'+ mapping[weather.code]+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      // html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      // html += '<li class="currently">'+weather.currently+'</li>';
+      // html += '<li>'+weather.alt.temp+'&deg;F</li></ul>';  
       
-      $("#weather").html(html);
+      // $("#weather").html(html);
       
       //$('.icon-23').addClass ('wi wi-strong-wind');
     },
