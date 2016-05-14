@@ -19,7 +19,7 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
 
-    <script src="./js/scripts.js"/>
+    <script src="./js/scripts.js" />
     </script>
 
     <link rel="stylesheet" href="./css/main.css" />
@@ -30,15 +30,41 @@
 <body>
     <div class="container">
         <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Your weather at Voorburg, ZH</h1>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-12">
-                <div id="weather"/>
-                <button class="js-geolocation">Use Your Location</button>
-                <br>
-                <i class="icon-3200"></i>
+                <div id="weather">
+                    <span class="main-box">
+                        <h2><i class="wi wi-day-cloudy"></i> 9°C</h2>
+                        </span>
+                    <ul>
+                        <li class="currently">Breezy</li>
+                        <li>48°F</li>
+                    </ul>
+                </div>
 
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-md-12">
+                
+                <div class="not-supported">Your browser does not support geolocation. Sorry!</button>
+                    <br>
+                    <i class="icon-3200"></i>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <hr/>
+                    <p>Copyright &copy; 2016 Tim van der Weijde. All rights reserved. Powered by: <a href="http://simpleweatherjs.com/"
+                            target="_blank">simpleWeatherJS</a></p>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
