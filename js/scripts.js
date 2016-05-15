@@ -76,7 +76,10 @@ function loadWeather(location, woeid) {
       
       // $("#weather").html(html);
       
-      //$('.icon-23').addClass ('wi wi-strong-wind');
+      $('#weather > div.main-box > h2').html('<i class="'+ mapping[weather.code]+'"></i> '+weather.temp+'&deg;'+weather.units.temp);
+      $("#weather > ul > li:nth-child(1)").html(weather.currently);
+      $("#weather > ul > li:nth-child(2)").html(weather.alt.temp+'&deg;F');
+      $("#location").html(weather.city + ', ' + weather.region);
     },
     error: function(error) {
       $("#weather").html('<p>'+error+'</p>');
