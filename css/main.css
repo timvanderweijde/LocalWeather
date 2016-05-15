@@ -3,12 +3,22 @@ body {
   font-family: "PT Sans", "Arial", Helvetica, sans-serif;
   /*font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
   background: #1192d3;
-  background-image:url('../images/bigstock-Spring-blossom-background-Bea-85929317.jpg'); 
+  background-image:url('../images/blossom-web2.jpg'); 
     background-position-x:center; 
     background-position-y:center; 
     background-color:#fff; 
     color: #fff;
     
+}
+
+
+a, a:visited {
+ color: white;
+ /*#997379; */
+}
+
+a:hover {
+  color: #ffc0cb;
 }
 
 .container {
@@ -20,7 +30,7 @@ body {
 }
 
 #weather {
-  width: 500px;
+  width: 100%;
   margin: 0px auto;
   text-align: center;
   text-transform: uppercase;
@@ -40,8 +50,8 @@ i {
     margin: 0 auto 30px;
     background-color: transparent;
     border: 5px solid white;
-    width: 425px;
-    height: 175px;
+    width: 100%;
+    /*height: 175px;*/
     font-size: 108px;
     line-height: 140px;
     display: block;
@@ -50,6 +60,7 @@ i {
     text-align: center;
     cursor: default;
     border-radius: 30px;
+    max-width: 550px;
 }
 
 h1 {
@@ -65,6 +76,8 @@ h2 {
   font-weight: 300;
   text-align: center;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  margin-top: 40px;
+  margin-bottom: -5px;
 }
 
 ul {
@@ -76,10 +89,6 @@ li {
   padding: 20px;
   display: inline-block;
   font-size: 22px;
-}
-
-li.currently {
-  margin-right: 75px;
 }
 
 .icon-0:before { }
