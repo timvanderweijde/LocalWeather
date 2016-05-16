@@ -1,7 +1,6 @@
 body {
   padding: 45px 25px;
   font-family: "PT Sans", "Arial", Helvetica, sans-serif;
-  /*font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
   background: #1192d3;
   background-image:url('../images/blossom-web2.jpg'); 
     background-position-x:center; 
@@ -11,10 +10,8 @@ body {
     
 }
 
-
 a, a:visited {
  color: white;
- /*#997379; */
 }
 
 a:hover {
@@ -34,24 +31,24 @@ a:hover {
   margin: 0px auto;
   text-align: center;
   text-transform: uppercase;
+  max-width: 550px;
 }
 
 i {
   color: #fff;
   font-family: weather;
-  font-size: 150px;
+  font-size: 130px;
   font-weight: normal;
   font-style: normal;
   line-height: 1.0;
+  margin-bottom: 10px;
 }
 
 .main-box
 {
-    margin: 0 auto 30px;
     background-color: transparent;
     border: 5px solid white;
     width: 100%;
-    /*height: 175px;*/
     font-size: 108px;
     line-height: 140px;
     display: block;
@@ -60,7 +57,6 @@ i {
     text-align: center;
     cursor: default;
     border-radius: 30px;
-    max-width: 550px;
 }
 
 h1 {
@@ -70,14 +66,13 @@ h1 {
 }
 
 h2 {
-  /*margin: 0 0 8px;*/
   color: #fff;
   font-size: 100px;
   font-weight: 300;
   text-align: center;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
-  margin-top: 40px;
-  margin-bottom: -5px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 ul {
@@ -90,52 +85,3 @@ li {
   display: inline-block;
   font-size: 22px;
 }
-
-.icon-0:before { }
-.icon-1:before { }
-.icon-2:before { }
-.icon-3:before { }
-.icon-4:before { }
-.icon-5:before { }
-.icon-6:before { }
-.icon-7:before { }
-.icon-8:before { }
-.icon-9:before { }
-.icon-10:before {  }
-.icon-11:before {  }
-.icon-12:before {  }
-.icon-13:before {  }
-.icon-14:before {  }
-.icon-15:before {  }
-.icon-16:before {  }
-.icon-17:before {  }
-.icon-18:before {  }
-.icon-19:before {  }
-.icon-20:before {  }
-.icon-21:before {  }
-.icon-22:before {  }
-.icon-23:before {  }
-.icon-24:before {  }
-.icon-25:before {  }
-.icon-26:before {  }
-.icon-27:before {  }
-.icon-28:before {  }
-.icon-29:before {  }
-.icon-30:before {  }
-.icon-31:before {  }
-.icon-32:before {  }
-.icon-33:before {  }
-.icon-34:before {  }
-.icon-35:before {  }
-.icon-36:before {  }
-.icon-37:before {  }
-.icon-38:before {  }
-.icon-39:before {  }
-.icon-40:before {  }
-.icon-41:before {  }
-.icon-42:before {  }
-.icon-43:before {  }
-.icon-44:before {  }
-.icon-45:before {  }
-.icon-46:before {  }
-.icon-47:before {  }
