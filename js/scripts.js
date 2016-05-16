@@ -48,19 +48,9 @@ mapping[45] = "wi wi-thunderstorm";
 mapping[46] = "wi wi-snow";
 mapping[47] = "wi wi-storm-showers";
 mapping[3200] = "wi wi-alien";
-   
-$(document).ready(function() {
-  
-  /* Does your browser support geolocation? */
-if ("geolocation" in navigator) {
-  $('.not-supported').hide(); 
-   navigator.geolocation.getCurrentPosition(function(position) {
-    loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
-  });
-} else {
-  $('.not-supported').show();
-}
- 
+
+$(document).ready(function () {
+    geoFindMe();
 });
 
 function loadWeather(location, woeid) {
@@ -68,21 +58,32 @@ function loadWeather(location, woeid) {
     location: location,
     woeid: woeid,
     unit: 'c',
-    success: function(weather) {
-      // html = '<h2><i class="'+ mapping[weather.code]+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      // html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      // html += '<li class="currently">'+weather.currently+'</li>';
-      // html += '<li>'+weather.alt.temp+'&deg;F</li></ul>';  
-      
-      // $("#weather").html(html);
-      
-      $('#weather > div.main-box > h2').html('<i class="'+ mapping[weather.code]+'"></i> '+weather.temp+'&deg;'+weather.units.temp);
+    success: function (weather) {
+      $('#weather > div.main-box > h2').html('<i class="' + mapping[weather.code] + '"></i> ' + weather.temp + '&deg;' + weather.units.temp);
       $("#weather > ul > li:nth-child(1)").html(weather.currently);
-      $("#weather > ul > li:nth-child(2)").html(weather.alt.temp+'&deg;F');
+      $("#weather > ul > li:nth-child(2)").html(weather.alt.temp + '&deg;F');
       $("#location").html(weather.city + ', ' + weather.region);
     },
-    error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
+    error: function (error) {
+      $("#weather").html('<p>' + error + '</p>');
     }
   });
+}
+
+function geoFindMe() {
+
+  if (!"geolocation" in navigator){
+    $("#weather").html('<p>Your browser does not support geolocation. Sorry!</p>');
+    return;
+  }
+
+  function success(position) {
+    loadWeather(position.coords.latitude + ',' + position.coords.longitude);
+  };
+
+  function error() {
+    $("#weather").html('<p>There was an error getting your geolocation. Sorry!</p>');
+  };
+
+  navigator.geolocation.getCurrentPosition(success, error);
 }
