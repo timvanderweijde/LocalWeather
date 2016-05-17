@@ -50,8 +50,29 @@ mapping[47] = "wi wi-storm-showers";
 mapping[3200] = "wi wi-alien";
 
 $(document).ready(function () {
-    geoFindMe();
+  $("#sw").bootstrapSwitch();
+  $("#sw").bootstrapSwitch('onText', '&deg;C');
+  $("#sw").bootstrapSwitch('offText', '&deg;F');
+  $("#sw").bootstrapSwitch('onColor', 'cel');
+  $("#sw").bootstrapSwitch('offColor', 'far');
+  $('#sw').on('switchChange.bootstrapSwitch', function (event, state) {
+    if (state === true) {
+      $('#weather > div.main-box > h2').html('<i class="' + mapping[vars.weatherCode] + '"></i> ' + vars.tempC + '&deg;' + vars.tempCSign);
+    }
+    else {
+      $('#weather > div.main-box > h2').html('<i class="' + mapping[vars.weatherCode] + '"></i> ' + vars.tempF + '&deg;' + vars.tempFSign);
+    }
+  });
+  geoFindMe();
 });
+
+var vars = function variables() {
+  var tempC = 0;
+  var tempF = 0;
+  var tempCSign = 'C';
+  var tempFSign = 'F';
+  var weatherCode = 3200;
+};
 
 function loadWeather(location, woeid) {
   $.simpleWeather({
@@ -59,9 +80,14 @@ function loadWeather(location, woeid) {
     woeid: woeid,
     unit: 'c',
     success: function (weather) {
-      $('#weather > div.main-box > h2').html('<i class="' + mapping[weather.code] + '"></i> ' + weather.temp + '&deg;' + weather.units.temp);
+      vars.tempC = weather.temp;
+      vars.tempF = weather.alt.temp;
+      vars.weatherCode = weather.code;
+      vars.tempCSign = 'C';
+      vars.tempFSign = 'F';
+
+      $('#weather > div.main-box > h2').html('<i class="' + mapping[vars.weatherCode] + '"></i> ' + vars.tempC + '&deg;' + vars.tempCSign);
       $("#weather > ul > li:nth-child(1)").html(weather.currently);
-      $("#weather > ul > li:nth-child(2)").html(weather.alt.temp + '&deg;F');
       $("#location").html(weather.city + ', ' + weather.region);
     },
     error: function (error) {
@@ -72,7 +98,7 @@ function loadWeather(location, woeid) {
 
 function geoFindMe() {
 
-  if (!"geolocation" in navigator){
+  if (!"geolocation" in navigator) {
     $("#weather").html('<p>Your browser does not support geolocation. Sorry!</p>');
     return;
   }

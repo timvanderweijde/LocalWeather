@@ -85,3 +85,15 @@ li {
   display: inline-block;
   font-size: 22px;
 }
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-cel,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-cel {
+  color: #fff;
+  background: #997379;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-far,
+.bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-far {
+  color: #fff;
+  background: #997379;
+}
